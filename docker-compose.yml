@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  golang-fake-bigquery:
+    image: joselitofilho/golang-fake-bigquery
+    container_name: fake_bigquery
+    ports:
+      - 9000:9000
+    restart: on-failure
+    environment:
+      FAKE_BQ_PORT: 9000
